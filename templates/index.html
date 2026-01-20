@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ settings.title }}</title>
+
+    <meta name="description" content="{{ settings.description }}">
+
+    {% if settings.icon %}
+        <link rel="icon" href="{{ settings.icon.url }}">
+    {% endif %}
+</head>
+<body>
+
+    <!-- ЛОГОТИП -->
+    {% if settings.logo %}
+        <img src="{{ settings.logo.url }}" alt="Логотип сайта">
+    {% endif %}
+
+    <!-- НАЗВАНИЕ САЙТА -->
+    <h1>{{ settings.title }}</h1>
+
+    <!-- ОПИСАНИЕ -->
+    <p>{{ settings.description }}</p>
+
+    <hr>
+
+    <!-- КОНТАКТЫ -->
+    <h2>Контакты</h2>
+
+    <p>Email: {{ settings.email }}</p>
+    <p>Телефон: {{ settings.phone }}</p>

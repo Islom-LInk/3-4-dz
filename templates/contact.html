@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты | {{ settings.title }}</title>
+
+    {% if settings.icon %}
+        <link rel="icon" href="{{ settings.icon.url }}">
+    {% endif %}
+</head>
+<body>
+
+    <h1>Контакты</h1>
+
+    <h2>{{ settings.title }}</h2>
+    <p>{{ settings.description }}</p>
+
+    <hr>
+
+    <p><strong>Email:</strong> {{ settings.email }}</p>
+    <p><strong>Телефон:</strong> {{ settings.phone }}</p>
+    <p><strong>Адрес:</strong> {{ settings.locate }}</p>
+
+    <hr>
+
+    <a href="{% url 'index-page' %}">← Вернуться на главную</a>
+
+</body>
+</html>
