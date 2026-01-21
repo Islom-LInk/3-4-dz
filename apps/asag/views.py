@@ -14,4 +14,3 @@ def contact(request):
 
 def index(request):
     return HttpResponse("Главная страница")
-
